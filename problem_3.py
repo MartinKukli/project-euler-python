@@ -1,4 +1,4 @@
-def solution_3(number = 600851475143, prime = 2):
+def solution_3(number=600851475143, prime=2):
     while (prime ** 2 <= number):
         if (number % prime == 0):
             number //= prime

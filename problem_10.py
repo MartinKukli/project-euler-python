@@ -23,10 +23,10 @@ def solution_10():
     result = 0
 
     for prime in primes:
-      if prime < limit:
-        result += prime
-      else:
-        break
+        if prime < limit:
+            result += prime
+        else:
+            break
 
     return result
 
