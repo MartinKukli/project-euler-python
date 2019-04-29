@@ -1,0 +1,29 @@
+def collatz_sequence(n):
+    seq_len = 1
+
+    while n > 1:
+        if n % 2 == 0:
+            n //= 2
+            seq_len += 1
+        else:
+            n = 3*n + 1
+            seq_len += 1
+
+    return seq_len
+
+
+def gen_col_seq(index):
+    longest_seq_num = -1
+    longest_seq_len = -1
+
+    while index != 0:
+        index -= 1
+        seq_len = collatz_sequence(index)
+        if longest_seq_len < seq_len:
+            longest_seq_num = index
+            longest_seq_len = seq_len
+
+    return (longest_seq_num, longest_seq_len)
+
+
+print(True if gen_col_seq(1000000) == (837799, 525) else False)
