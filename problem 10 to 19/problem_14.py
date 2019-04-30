@@ -1,12 +1,23 @@
+cache = {}
+
+
 def collatz_sequence(n):
     seq_len = 1
 
     while n > 1:
         if n % 2 == 0:
-            n //= 2
+            if n in cache:
+                n = cache[n]
+            else:
+                cache[n] = n // 2
+                n = n // 2
             seq_len += 1
         else:
-            n = 3*n + 1
+            if n in cache:
+                n = cache[n]
+            else:
+                cache[n] = 3*n + 1
+                n = 3*n + 1
             seq_len += 1
 
     return seq_len
