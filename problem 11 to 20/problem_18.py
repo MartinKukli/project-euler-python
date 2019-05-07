@@ -17,24 +17,19 @@ n_tri = [
 
 
 def max_path_sum():
-    # loop through every row before the last row; last row contains paths sums
-    for r_index in range(len(n_tri)-1):
-        # iterates for count of values in the next row
-        r_len = len(n_tri[r_index+1])
-        for v_index in range(r_len):
-            # first and last value have only one value on top of them
-            if v_index == 0:
-                n_tri[r_index+1][0] += n_tri[r_index][0]
-            elif v_index == r_len-1:
-                n_tri[r_index+1][-1] += n_tri[r_index][-1]
+    for rindex in range(len(n_tri)-1):
+        row_len = len(n_tri[rindex+1])
+        for vindex in range(row_len):
+            if vindex == 0:
+                n_tri[rindex+1][0] += n_tri[rindex][0]
+            elif vindex == row_len-1:
+                n_tri[rindex+1][-1] += n_tri[rindex][-1]
             else:
-                # compares two value over the next row value
-                if n_tri[r_index][v_index-1] > n_tri[r_index][v_index]:
-                    n_tri[r_index+1][v_index] += n_tri[r_index][v_index-1]
+                if n_tri[rindex][vindex-1] > n_tri[rindex][vindex]:
+                    n_tri[rindex+1][vindex] += n_tri[rindex][vindex-1]
                 else:
-                    n_tri[r_index+1][v_index] += n_tri[r_index][v_index]
-    # returns max path sum
+                    n_tri[rindex+1][vindex] += n_tri[rindex][vindex]
     return max(n_tri[-1])
 
 
-print(True if max_path_sum() == 1074 else False)
+print("result =", max_path_sum())
