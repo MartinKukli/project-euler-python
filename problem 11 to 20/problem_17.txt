@@ -1,0 +1,6 @@
+numbers 1 to 9 count: 36
+numbers 10 to 19 count: 70
+numbers 20 to 99 count: 748
+numbers 100 to 999 count: 20259
+numbers 1 to 999 plus 1000 count: 36 + 70 + 748 + 20259 + 11
+count: 21124 letters
