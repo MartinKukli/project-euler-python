@@ -75,5 +75,5 @@ def product_diagonally_right():
     return lrget_dgnlly_rght
 
 
-print(max(product_down(), product_left(),
-          product_diagonally_left(), product_diagonally_right()))
+print(True if max(product_down(), product_left(),
+          product_diagonally_left(), product_diagonally_right()) == 70600674 else False)

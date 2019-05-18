@@ -1,8 +1,4 @@
 import math
 
-
-def lattice_paths(x=1):
-    return math.factorial(x*2) // (math.factorial(x)**2)
-
-
-print(lattice_paths(20))
+print(True if (math.factorial(20*2) // (math.factorial(20)**2))
+      == 137846528820 else False)
