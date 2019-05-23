@@ -1,3 +1,6 @@
+from operator import mul
+from functools import reduce
+
 big_number = "73167176531330624919225119674426574742355349194934\
 96983520312774506326239578318016984801869478851843\
 85861560789112949495459501737958331952853208805511\
@@ -20,23 +23,13 @@ big_number = "73167176531330624919225119674426574742355349194934\
 71636269561882670428252483600823257530420752963450"
 
 
-def solution_8():
+def largest_product_in_a_series(result = 0):
     num_slice = [int(char) for char in big_number]
-    result = 0
-
     for num in range(len(num_slice)):
-        num_slice_product = calc_product(num_slice[num:num+13])
+        num_slice_product = reduce(mul, num_slice[num:num+13], 1)
         if num_slice_product > result:
             result = num_slice_product
-
     return result
 
 
-def calc_product(dummy_list):
-    x = 1
-    for elm in dummy_list:
-        x *= elm
-    return x
-
-
-print(True if solution_8() == 23514624000 else False)
+print(True if largest_product_in_a_series() == 23514624000 else False)

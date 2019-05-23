@@ -1,4 +1,4 @@
-def solution_5():
+def smallest_multiple():
     number = 10
     while True:
         number += 1
@@ -14,4 +14,4 @@ def solution_5():
             return number
 
 
-print(True if solution_5() == 232792560 else False)
+print(True if smallest_multiple() == 232792560 else False)

@@ -1,4 +1,4 @@
-def solution_3(number=600851475143, prime=2):
+def largest_prime_factor(number=600851475143, prime=2):
     while (prime ** 2 <= number):
         if (number % prime == 0):
             number //= prime
@@ -7,4 +7,4 @@ def solution_3(number=600851475143, prime=2):
     return number
 
 
-print(True if solution_3() == 6857 else False)
+print(True if largest_prime_factor() == 6857 else False)
