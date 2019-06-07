@@ -10,7 +10,7 @@ def fibb_nums_gen(limit):
 
 def find_primes(n):
     limit = upper_bound_for_nth_prime(n)
-    nums = [True] * (limit + 1)
+    nums = [True for i in range(limit+1)]
     nums[0] = nums[1] = False
     for (i, is_prime) in enumerate(nums):
         if is_prime:
