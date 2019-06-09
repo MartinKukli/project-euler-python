@@ -20,7 +20,7 @@ def factors(n):
     return l1 + l2
 
 
-def solution_12(div_count_limit):
+def highly_divisible_triangular_number(div_count_limit):
     result = (0, 0)
     for tri_num in triangular_number():
         divisors_count = len(factors(tri_num))
@@ -30,4 +30,5 @@ def solution_12(div_count_limit):
     return result
 
 
-print(solution_12(500)) # returns tuple(factor count, triangular number)
+# returns tuple(factor count, triangular number)
+print(highly_divisible_triangular_number(500))
