@@ -1,4 +1,4 @@
-from helpers import find_primes, upper_bound_for_nth_prime
+from helpers import find_primes
 
 
 def find_nth_prime(limit):
