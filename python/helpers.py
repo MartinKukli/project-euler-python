@@ -1,4 +1,10 @@
-from math import log, ceil
+from math import ceil, log
+from functools import lru_cache
+
+
+@lru_cache(None)
+def fib_rec(n):
+    return 1 if n < 2 else fib_rec(n-2) + fib_rec(n-1)
 
 
 def fibb_nums_gen(limit):
