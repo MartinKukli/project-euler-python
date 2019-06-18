@@ -1,17 +1,17 @@
+def check_div(input):
+    for i in [11, 13, 14, 16, 17, 18, 19, 20]:
+        if input % i != 0:
+            return False
+    return True
+
+
 def smallest_multiple():
-    number = 10
+    number = 20
     while True:
-        number += 1
-        if (number % 11 == 0 and
-            number % 12 == 0 and
-            number % 13 == 0 and
-            number % 14 == 0 and
-            number % 15 == 0 and
-            number % 16 == 0 and
-            number % 17 == 0 and
-            number % 18 == 0 and
-                number % 19 == 0):
+        number += 20
+        if (check_div(number)):
             return number
 
 
-print(True if smallest_multiple() == 232792560 else False)
+answer = 232792560
+print(True if smallest_multiple() == answer else False)
