@@ -16,7 +16,7 @@ def calc_day(d, m, y):
         d += 1
     elif m == 2 and y % 4 != 0:
         d += 0
-    # 1 to 7 == Mon to Sun, -7 keeps it than way
+    # 1 to 7 == Mon to Sun, -7 keeps it that way
     return d - 7 if d > 7 else d
 
 
@@ -33,5 +33,5 @@ def count_sundays(num_of_sundays=0):
         num_of_sundays = num_of_sundays + 1 if date[0] == 7 else num_of_sundays
     return num_of_sundays
 
-
-print(True if count_sundays() == 171 else False)
+answer = 171
+print(True if count_sundays() == answer else False)
