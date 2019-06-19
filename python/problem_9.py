@@ -1,4 +1,4 @@
-def special_pythagorean_triplet(input):
+def special_pythagorean_triplet(input=1000):
     for a in range(1, input):
         for b in range(1, input-a):
             c = input-a-b
@@ -6,4 +6,5 @@ def special_pythagorean_triplet(input):
                 return a*b*c
 
 
-print(True if special_pythagorean_triplet(1000) == 31875000 else False)
+answer = 31875000
+print(True if special_pythagorean_triplet() == answer else False)

@@ -7,4 +7,5 @@ def largest_prime_factor(number=600851475143, prime=2):
     return number
 
 
-print(True if largest_prime_factor() == 6857 else False)
+answer = 6857
+print(True if largest_prime_factor() == answer else False)

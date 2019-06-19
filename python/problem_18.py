@@ -32,4 +32,5 @@ def max_path_sum():
     return max(n_tri[-1])
 
 
-print("result =", max_path_sum())
+answer = 1074
+print(True if max_path_sum() == answer else False)

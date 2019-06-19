@@ -1,23 +1,7 @@
-import math
+from helpers import divSum
 
 # https://www.geeksforgeeks.org/sum-of-all-proper-divisors-of-a-natural-number/
-
-
-def divSum(num):
-    result = 0
-    i = 2
-    while i <= (math.sqrt(num)):
-        if (num % i == 0):
-            if (i == (num // i)):
-                result = result + i
-            else:
-                result = result + (i + num//i)
-        i = i + 1
-    return (result + 1)
-
-
-def amicable_nums_sum(limit=10000):
-    result = 0
+def amicable_nums_sum(limit=10000, result = 0):
     for num in range(1, limit):
         first_sum = divSum(num)
         second_sum = divSum(first_sum)
@@ -26,4 +10,5 @@ def amicable_nums_sum(limit=10000):
     return result
 
 
-print(True if amicable_nums_sum() == 31626 else False)
+answer = 31626
+print(True if amicable_nums_sum() == answer else False)

@@ -23,10 +23,7 @@ def collatz_sequence(n):
     return seq_len
 
 
-def gen_col_seq(index):
-    longest_seq_num = -1
-    longest_seq_len = -1
-
+def gen_col_seq(index=1000000, longest_seq_num=-1, longest_seq_len=-1):
     while index != 0:
         index -= 1
         seq_len = collatz_sequence(index)
@@ -37,4 +34,5 @@ def gen_col_seq(index):
     return (longest_seq_num, longest_seq_len)
 
 
-print(True if gen_col_seq(1000000) == (837799, 525) else False)
+answer = (837799, 525)
+print(True if gen_col_seq() == answer else False)

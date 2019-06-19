@@ -7,4 +7,5 @@ def largest_palindrome_product(largest_palindrome=0):
     return largest_palindrome
 
 
-print(True if largest_palindrome_product() == 906609 else False)
+answer = 906609
+print(True if largest_palindrome_product() == answer else False)

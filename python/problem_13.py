@@ -100,5 +100,6 @@ very_large_list_of_numbers = '''371072875339021027987979982208375902465101357402
 53503534226472524250874054075591789781264330331690'''
 
 # list of string numbers => list of ints => list sum => conv to string and takes first 10 char => conv to int
-print(True if int(str(sum(list(map(int, very_large_list_of_numbers.split()))))[
-      0:10]) == 5537376230 else False)
+large_sum = int(str(sum(list(map(int, very_large_list_of_numbers.split()))))[0:10])
+answer = 5537376230
+print(True if large_sum == answer else False)

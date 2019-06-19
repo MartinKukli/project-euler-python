@@ -23,7 +23,7 @@ big_number = "73167176531330624919225119674426574742355349194934\
 71636269561882670428252483600823257530420752963450"
 
 
-def largest_product_in_a_series(result = 0):
+def largest_product_in_a_series(result=0):
     num_slice = [int(char) for char in big_number]
     for num in range(len(num_slice)):
         num_slice_product = reduce(mul, num_slice[num:num+13], 1)
@@ -32,4 +32,5 @@ def largest_product_in_a_series(result = 0):
     return result
 
 
-print(True if largest_product_in_a_series() == 23514624000 else False)
+answer = 23514624000
+print(True if largest_product_in_a_series() == answer else False)

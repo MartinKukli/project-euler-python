@@ -74,5 +74,6 @@ def product_diagonally_right():
     return lrget_dgnlly_rght
 
 
+answer = 70600674
 print(True if max(product_down(), product_left(),
                   product_diagonally_left(), product_diagonally_right()) == 70600674 else False)

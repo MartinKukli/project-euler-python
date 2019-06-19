@@ -1,18 +1,4 @@
-import math
-
-
-def divSum(num):
-    result = 0
-    i = 2
-    while i <= (math.sqrt(num)):
-        if (num % i == 0):
-            if (i == (num // i)):
-                result = result + i
-            else:
-                result = result + (i + num//i)
-        i = i + 1
-    return (result + 1)
-
+from helpers import divSum
 
 def abundant_nums_gen(start=1, limit=28124):
     abundant = []
@@ -42,4 +28,5 @@ def non_abundant_sums(limit=28124):
     return result
 
 
-print(True if non_abundant_sums() == 4179871 else False)
+answer = 4179871
+print(True if non_abundant_sums() == answer else False)
