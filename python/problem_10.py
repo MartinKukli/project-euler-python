@@ -1,7 +1,7 @@
 from helpers import find_primes, upper_bound_for_nth_prime
 
 
-def summation_of_primes(limit=2000000, result=0):
+def summation_of_primes(limit=2000000):
     return sum([prime if prime < limit else 0 for prime in list(find_primes(limit))])
 
 
