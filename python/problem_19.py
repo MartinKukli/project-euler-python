@@ -8,9 +8,9 @@ def calc_day(d, m, y):
     example 1: Tu 1 Jan 1901 => Fr 1 Feb 1901
     example 2: Fr 1 Feb 1901 => Fr 1 Mar
     '''
-    if m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12:
+    if m in [1, 3, 5, 7, 8, 10, 12]:
         d += 3
-    elif m == 4 or m == 6 or m == 9 or m == 11:
+    elif m in [4, 6, 9, 11]:
         d += 2
     elif m == 2 and y % 4 == 0:
         d += 1
@@ -32,6 +32,7 @@ def count_sundays(num_of_sundays=0):
     for date in date_generator():
         num_of_sundays = num_of_sundays + 1 if date[0] == 7 else num_of_sundays
     return num_of_sundays
+
 
 answer = 171
 print(True if count_sundays() == answer else False)
