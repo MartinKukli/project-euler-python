@@ -13,4 +13,4 @@ function multiples_of_3_and_5($limit = 1000)
 }
 
 $answer = 233168;
-echo multiples_of_3_and_5() == $answer ? true : false;
+echo multiples_of_3_and_5() == $answer ? "true" : "false";
