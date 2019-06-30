@@ -1,7 +1,7 @@
 <?php
 function sum_of_squares($result = 0)
 {
-  foreach (range(1, 101) as $num) {
+  foreach (range(1, 100) as $num) {
     $result += $num ** 2;
   }
   return $result;
@@ -9,7 +9,7 @@ function sum_of_squares($result = 0)
 
 function square_of_sum($result = 0)
 {
-  foreach (range(1, 101) as $num) {
+  foreach (range(1, 100) as $num) {
     $result += $num;
   }
   return $result ** 2;
@@ -18,4 +18,4 @@ function square_of_sum($result = 0)
 $sum_square_difference = square_of_sum() - sum_of_squares();
 
 $answer = 25164150;
-echo $sum_square_difference." === ".$answer;
+echo $sum_square_difference === $answer ? "true" : "false";
