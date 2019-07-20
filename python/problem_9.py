@@ -1,10 +1,4 @@
-def special_pythagorean_triplet(input=1000):
-    for a in range(1, input):
-        for b in range(1, input-a):
-            c = input-a-b
-            if a**2+b**2 == c**2:
-                return a*b*c
-
-
+special_pythagorean_triplet = [a*b*(1000-a-b) for a in range(1, 1000)
+                               for b in range(1, 1000-a) if a**2+b**2 == (1000-a-b)**2][0]
 answer = 31875000
-print(True if special_pythagorean_triplet() == answer else False)
+print(True if special_pythagorean_triplet == answer else False)
